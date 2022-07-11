@@ -10,6 +10,8 @@
 		01153759287C0F0D003D663D /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01153758287C0F0D003D663D /* AuthenticationViewController.swift */; };
 		0115375B287C0F21003D663D /* AuthWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0115375A287C0F21003D663D /* AuthWebViewViewController.swift */; };
 		0115375D287C4627003D663D /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0115375C287C4627003D663D /* TokenModel.swift */; };
+		0115375F287C46A1003D663D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0115375E287C46A1003D663D /* String+Extensions.swift */; };
+		01153762287C4EA6003D663D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01153761287C4EA6003D663D /* BaseViewController.swift */; };
 		012D548A287BF2A7004ABFD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D5489287BF2A7004ABFD5 /* AppDelegate.swift */; };
 		012D5491287BF2A7004ABFD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012D548F287BF2A7004ABFD5 /* Main.storyboard */; };
 		012D5493287BF2A9004ABFD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012D5492287BF2A9004ABFD5 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 		01153758287C0F0D003D663D /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		0115375A287C0F21003D663D /* AuthWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebViewViewController.swift; sourceTree = "<group>"; };
 		0115375C287C4627003D663D /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
+		0115375E287C46A1003D663D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		01153761287C4EA6003D663D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		012D5486287BF2A7004ABFD5 /* Spotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		012D5489287BF2A7004ABFD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		012D5490287BF2A7004ABFD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,6 +91,14 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		01153760287C4E99003D663D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				01153761287C4EA6003D663D /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		012D547D287BF2A7004ABFD5 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +120,7 @@
 		012D5488287BF2A7004ABFD5 /* Spotifier */ = {
 			isa = PBXGroup;
 			children = (
+				01153760287C4E99003D663D /* Base */,
 				012D549E287BF6EB004ABFD5 /* Assets */,
 				012D54A2287BF714004ABFD5 /* Application */,
 				012D54C4287BFCF3004ABFD5 /* Constants */,
@@ -147,6 +160,7 @@
 				012D54B3287BF804004ABFD5 /* UIViewController+Extensions.swift */,
 				012D54B5287BF821004ABFD5 /* UIView+Extensions.swift */,
 				012D54B7287BF840004ABFD5 /* UITextfield+Extensions.swift */,
+				0115375E287C46A1003D663D /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -348,6 +362,8 @@
 				012D54AC287BF780004ABFD5 /* RetrieInterceptor.swift in Sources */,
 				012D54B6287BF821004ABFD5 /* UIView+Extensions.swift in Sources */,
 				012D548A287BF2A7004ABFD5 /* AppDelegate.swift in Sources */,
+				01153762287C4EA6003D663D /* BaseViewController.swift in Sources */,
+				0115375F287C46A1003D663D /* String+Extensions.swift in Sources */,
 				012D54C3287BFC75004ABFD5 /* AuthenticationViewModel.swift in Sources */,
 				0115375B287C0F21003D663D /* AuthWebViewViewController.swift in Sources */,
 				012D54BF287BFB1E004ABFD5 /* UserInfoModel.swift in Sources */,

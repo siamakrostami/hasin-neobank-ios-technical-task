@@ -11,10 +11,12 @@ import Alamofire
 final class RetrierInterceptor : Interceptor {
     private var limit : Int
     private var delay : TimeInterval
+    private var viewModel : AuthenticationViewModel
     
     init(limit : Int , delay : TimeInterval){
         self.limit = limit
         self.delay = delay
+        self.viewModel = AuthenticationViewModel()
         super.init()
     }
     
@@ -30,6 +32,8 @@ final class RetrierInterceptor : Interceptor {
     }
     override func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
         if let response = request.task?.response as? HTTPURLResponse, response.statusCode == 401 {
+            guard let refresh = UserInfoModel.shared.getRefreshToken() else {return}
+            self.viewModel.getRefreshToken(refreshToken: refresh)
         }
     }
 }
