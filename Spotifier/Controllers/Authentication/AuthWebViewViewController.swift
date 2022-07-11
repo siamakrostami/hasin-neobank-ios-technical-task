@@ -9,7 +9,7 @@ import UIKit
 import WebKit
 import Combine
 
-class AuthWebViewViewController: UIViewController {
+class AuthWebViewViewController: BaseViewController {
     
     private let webView: WKWebView = {
         let prefs = WKWebpagePreferences()
@@ -26,7 +26,8 @@ class AuthWebViewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initializeWebView()
-        self.navigationItem.backButtonDisplayMode = .minimal
+        self.loadWebView()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +49,6 @@ extension AuthWebViewViewController {
         view.backgroundColor = .systemBackground
         webView.navigationDelegate = self
         self.view.addSubview(webView)
-        self.loadWebView()
     }
     
     private func loadWebView(){
