@@ -13,6 +13,7 @@
 		012D5491287BF2A7004ABFD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012D548F287BF2A7004ABFD5 /* Main.storyboard */; };
 		012D5493287BF2A9004ABFD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012D5492287BF2A9004ABFD5 /* Assets.xcassets */; };
 		012D5496287BF2A9004ABFD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012D5494287BF2A9004ABFD5 /* LaunchScreen.storyboard */; };
+		B70D815830035FE66B83E72E /* Pods_Spotifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9925745D381F5C55B39B6F /* Pods_Spotifier.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		012D5492287BF2A9004ABFD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		012D5495287BF2A9004ABFD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		012D5497287BF2A9004ABFD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5991B37FB89BBF9F8863030D /* Pods-Spotifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotifier.debug.xcconfig"; path = "Target Support Files/Pods-Spotifier/Pods-Spotifier.debug.xcconfig"; sourceTree = "<group>"; };
+		CB9925745D381F5C55B39B6F /* Pods_Spotifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spotifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F37A572C7E11CD2289D951AD /* Pods-Spotifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotifier.release.xcconfig"; path = "Target Support Files/Pods-Spotifier/Pods-Spotifier.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B70D815830035FE66B83E72E /* Pods_Spotifier.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				012D5488287BF2A7004ABFD5 /* Spotifier */,
 				012D5487287BF2A7004ABFD5 /* Products */,
+				519A73B223CF0798D2E9D881 /* Pods */,
+				0FAB55AB2670731AF8027B9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = Spotifier;
 			sourceTree = "<group>";
 		};
+		0FAB55AB2670731AF8027B9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB9925745D381F5C55B39B6F /* Pods_Spotifier.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		519A73B223CF0798D2E9D881 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5991B37FB89BBF9F8863030D /* Pods-Spotifier.debug.xcconfig */,
+				F37A572C7E11CD2289D951AD /* Pods-Spotifier.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 012D549A287BF2A9004ABFD5 /* Build configuration list for PBXNativeTarget "Spotifier" */;
 			buildPhases = (
+				64DB9034284307A33108683E /* [CP] Check Pods Manifest.lock */,
 				012D5482287BF2A7004ABFD5 /* Sources */,
 				012D5483287BF2A7004ABFD5 /* Frameworks */,
 				012D5484287BF2A7004ABFD5 /* Resources */,
+				F42F8E5AEBF02E4EC20DE340 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		64DB9034284307A33108683E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Spotifier-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F42F8E5AEBF02E4EC20DE340 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Spotifier/Pods-Spotifier-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Spotifier/Pods-Spotifier-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Spotifier/Pods-Spotifier-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		012D5482287BF2A7004ABFD5 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		012D549B287BF2A9004ABFD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5991B37FB89BBF9F8863030D /* Pods-Spotifier.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +379,7 @@
 		};
 		012D549C287BF2A9004ABFD5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F37A572C7E11CD2289D951AD /* Pods-Spotifier.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
