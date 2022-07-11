@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01153759287C0F0D003D663D /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01153758287C0F0D003D663D /* AuthenticationViewController.swift */; };
+		0115375B287C0F21003D663D /* AuthWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0115375A287C0F21003D663D /* AuthWebViewViewController.swift */; };
+		0115375D287C4627003D663D /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0115375C287C4627003D663D /* TokenModel.swift */; };
 		012D548A287BF2A7004ABFD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D5489287BF2A7004ABFD5 /* AppDelegate.swift */; };
-		012D548C287BF2A7004ABFD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D548B287BF2A7004ABFD5 /* SceneDelegate.swift */; };
-		012D548E287BF2A7004ABFD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D548D287BF2A7004ABFD5 /* ViewController.swift */; };
 		012D5491287BF2A7004ABFD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012D548F287BF2A7004ABFD5 /* Main.storyboard */; };
 		012D5493287BF2A9004ABFD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012D5492287BF2A9004ABFD5 /* Assets.xcassets */; };
 		012D5496287BF2A9004ABFD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012D5494287BF2A9004ABFD5 /* LaunchScreen.storyboard */; };
@@ -30,10 +31,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01153758287C0F0D003D663D /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		0115375A287C0F21003D663D /* AuthWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebViewViewController.swift; sourceTree = "<group>"; };
+		0115375C287C4627003D663D /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		012D5486287BF2A7004ABFD5 /* Spotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		012D5489287BF2A7004ABFD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		012D548B287BF2A7004ABFD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		012D548D287BF2A7004ABFD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		012D5490287BF2A7004ABFD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		012D5492287BF2A9004ABFD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		012D5495287BF2A9004ABFD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,6 +70,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01153756287C02A9003D663D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				01153757287C02B3003D663D /* Authentication */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		01153757287C02B3003D663D /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				01153758287C0F0D003D663D /* AuthenticationViewController.swift */,
+				0115375A287C0F21003D663D /* AuthWebViewViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		012D547D287BF2A7004ABFD5 = {
 			isa = PBXGroup;
 			children = (
@@ -91,16 +110,12 @@
 			children = (
 				012D549E287BF6EB004ABFD5 /* Assets */,
 				012D54A2287BF714004ABFD5 /* Application */,
-				012D54A4287BF729004ABFD5 /* Base */,
 				012D54C4287BFCF3004ABFD5 /* Constants */,
 				012D54BD287BFB0C004ABFD5 /* Models */,
-				012D54A1287BF70D004ABFD5 /* Helpers */,
-				012D54A0287BF704004ABFD5 /* Utilities */,
 				012D549F287BF6F8004ABFD5 /* Extensions */,
 				012D54A3287BF721004ABFD5 /* ViewModels */,
 				012D549D287BF6E2004ABFD5 /* Network */,
-				012D54A5287BF740004ABFD5 /* Controllers */,
-				012D548D287BF2A7004ABFD5 /* ViewController.swift */,
+				01153756287C02A9003D663D /* Controllers */,
 				012D548F287BF2A7004ABFD5 /* Main.storyboard */,
 				012D5497287BF2A9004ABFD5 /* Info.plist */,
 			);
@@ -136,25 +151,10 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		012D54A0287BF704004ABFD5 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		012D54A1287BF70D004ABFD5 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		012D54A2287BF714004ABFD5 /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				012D5489287BF2A7004ABFD5 /* AppDelegate.swift */,
-				012D548B287BF2A7004ABFD5 /* SceneDelegate.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -165,20 +165,6 @@
 				012D54C2287BFC75004ABFD5 /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		012D54A4287BF729004ABFD5 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		012D54A5287BF740004ABFD5 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		012D54B0287BF7BB004ABFD5 /* Repositories */ = {
@@ -213,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				012D54BE287BFB1E004ABFD5 /* UserInfoModel.swift */,
+				0115375C287C4627003D663D /* TokenModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -357,21 +344,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				012D548E287BF2A7004ABFD5 /* ViewController.swift in Sources */,
 				012D54C6287BFD05004ABFD5 /* Constants.swift in Sources */,
 				012D54AC287BF780004ABFD5 /* RetrieInterceptor.swift in Sources */,
 				012D54B6287BF821004ABFD5 /* UIView+Extensions.swift in Sources */,
 				012D548A287BF2A7004ABFD5 /* AppDelegate.swift in Sources */,
 				012D54C3287BFC75004ABFD5 /* AuthenticationViewModel.swift in Sources */,
+				0115375B287C0F21003D663D /* AuthWebViewViewController.swift in Sources */,
 				012D54BF287BFB1E004ABFD5 /* UserInfoModel.swift in Sources */,
 				012D54B8287BF840004ABFD5 /* UITextfield+Extensions.swift in Sources */,
-				012D548C287BF2A7004ABFD5 /* SceneDelegate.swift in Sources */,
 				012D54BA287BF8C7004ABFD5 /* NetworkServices.swift in Sources */,
 				012D54B4287BF804004ABFD5 /* UIViewController+Extensions.swift in Sources */,
 				012D54AB287BF780004ABFD5 /* MimeType.swift in Sources */,
+				0115375D287C4627003D663D /* TokenModel.swift in Sources */,
 				012D54BC287BF8E2004ABFD5 /* SpotifyAuthRepository.swift in Sources */,
 				012D54AF287BF780004ABFD5 /* ClientError.swift in Sources */,
 				012D54AD287BF780004ABFD5 /* APIClient.swift in Sources */,
+				01153759287C0F0D003D663D /* AuthenticationViewController.swift in Sources */,
 				012D54AE287BF780004ABFD5 /* NetworkRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,7 +512,7 @@
 				INFOPLIST_FILE = Spotifier/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -536,7 +524,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -552,7 +540,7 @@
 				INFOPLIST_FILE = Spotifier/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -564,7 +552,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
