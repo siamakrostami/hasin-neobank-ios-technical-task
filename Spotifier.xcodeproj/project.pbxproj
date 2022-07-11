@@ -12,6 +12,8 @@
 		0115375D287C4627003D663D /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0115375C287C4627003D663D /* TokenModel.swift */; };
 		0115375F287C46A1003D663D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0115375E287C46A1003D663D /* String+Extensions.swift */; };
 		01153762287C4EA6003D663D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01153761287C4EA6003D663D /* BaseViewController.swift */; };
+		01153765287C5390003D663D /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01153764287C5390003D663D /* Search.storyboard */; };
+		01153767287C53A3003D663D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01153766287C53A3003D663D /* SearchViewController.swift */; };
 		012D548A287BF2A7004ABFD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D5489287BF2A7004ABFD5 /* AppDelegate.swift */; };
 		012D5491287BF2A7004ABFD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012D548F287BF2A7004ABFD5 /* Main.storyboard */; };
 		012D5493287BF2A9004ABFD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012D5492287BF2A9004ABFD5 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 		0115375C287C4627003D663D /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		0115375E287C46A1003D663D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		01153761287C4EA6003D663D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		01153764287C5390003D663D /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		01153766287C53A3003D663D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		012D5486287BF2A7004ABFD5 /* Spotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		012D5489287BF2A7004ABFD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		012D5490287BF2A7004ABFD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 		01153756287C02A9003D663D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				01153763287C537A003D663D /* Search */,
 				01153757287C02B3003D663D /* Authentication */,
 			);
 			path = Controllers;
@@ -97,6 +102,23 @@
 				01153761287C4EA6003D663D /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		01153763287C537A003D663D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				01153768287C53AE003D663D /* XIB */,
+				01153764287C5390003D663D /* Search.storyboard */,
+				01153766287C53A3003D663D /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		01153768287C53AE003D663D /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XIB;
 			sourceTree = "<group>";
 		};
 		012D547D287BF2A7004ABFD5 = {
@@ -305,6 +327,7 @@
 			files = (
 				012D5496287BF2A9004ABFD5 /* LaunchScreen.storyboard in Resources */,
 				012D5493287BF2A9004ABFD5 /* Assets.xcassets in Resources */,
+				01153765287C5390003D663D /* Search.storyboard in Resources */,
 				012D5491287BF2A7004ABFD5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +391,7 @@
 				0115375B287C0F21003D663D /* AuthWebViewViewController.swift in Sources */,
 				012D54BF287BFB1E004ABFD5 /* UserInfoModel.swift in Sources */,
 				012D54B8287BF840004ABFD5 /* UITextfield+Extensions.swift in Sources */,
+				01153767287C53A3003D663D /* SearchViewController.swift in Sources */,
 				012D54BA287BF8C7004ABFD5 /* NetworkServices.swift in Sources */,
 				012D54B4287BF804004ABFD5 /* UIViewController+Extensions.swift in Sources */,
 				012D54AB287BF780004ABFD5 /* MimeType.swift in Sources */,
