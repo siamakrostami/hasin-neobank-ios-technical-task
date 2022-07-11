@@ -13,5 +13,9 @@ struct NetworkServices {
         return SpotifyAuthRepository()
     }()
     
+    lazy var searchService : SearchRepository = {
+       return SearchRepository()
+    }()
+    
     
 }

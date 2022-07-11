@@ -14,6 +14,9 @@
 		01153762287C4EA6003D663D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01153761287C4EA6003D663D /* BaseViewController.swift */; };
 		01153765287C5390003D663D /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01153764287C5390003D663D /* Search.storyboard */; };
 		01153767287C53A3003D663D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01153766287C53A3003D663D /* SearchViewController.swift */; };
+		0115376A287C57A0003D663D /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01153769287C57A0003D663D /* SearchRepository.swift */; };
+		0115376C287C5D1E003D663D /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0115376B287C5D1E003D663D /* SearchModel.swift */; };
+		0115376E287C6082003D663D /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0115376D287C6082003D663D /* SearchViewModel.swift */; };
 		012D548A287BF2A7004ABFD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D5489287BF2A7004ABFD5 /* AppDelegate.swift */; };
 		012D5491287BF2A7004ABFD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012D548F287BF2A7004ABFD5 /* Main.storyboard */; };
 		012D5493287BF2A9004ABFD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012D5492287BF2A9004ABFD5 /* Assets.xcassets */; };
@@ -42,6 +45,9 @@
 		01153761287C4EA6003D663D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		01153764287C5390003D663D /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		01153766287C53A3003D663D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		01153769287C57A0003D663D /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
+		0115376B287C5D1E003D663D /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		0115376D287C6082003D663D /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		012D5486287BF2A7004ABFD5 /* Spotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		012D5489287BF2A7004ABFD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		012D5490287BF2A7004ABFD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -199,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				012D54C2287BFC75004ABFD5 /* AuthenticationViewModel.swift */,
+				0115376D287C6082003D663D /* SearchViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -207,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				012D54BB287BF8E2004ABFD5 /* SpotifyAuthRepository.swift */,
+				01153769287C57A0003D663D /* SearchRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -236,6 +244,7 @@
 			children = (
 				012D54BE287BFB1E004ABFD5 /* UserInfoModel.swift */,
 				0115375C287C4627003D663D /* TokenModel.swift */,
+				0115376B287C5D1E003D663D /* SearchModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -395,10 +404,13 @@
 				012D54BA287BF8C7004ABFD5 /* NetworkServices.swift in Sources */,
 				012D54B4287BF804004ABFD5 /* UIViewController+Extensions.swift in Sources */,
 				012D54AB287BF780004ABFD5 /* MimeType.swift in Sources */,
+				0115376E287C6082003D663D /* SearchViewModel.swift in Sources */,
 				0115375D287C4627003D663D /* TokenModel.swift in Sources */,
 				012D54BC287BF8E2004ABFD5 /* SpotifyAuthRepository.swift in Sources */,
 				012D54AF287BF780004ABFD5 /* ClientError.swift in Sources */,
+				0115376C287C5D1E003D663D /* SearchModel.swift in Sources */,
 				012D54AD287BF780004ABFD5 /* APIClient.swift in Sources */,
+				0115376A287C57A0003D663D /* SearchRepository.swift in Sources */,
 				01153759287C0F0D003D663D /* AuthenticationViewController.swift in Sources */,
 				012D54AE287BF780004ABFD5 /* NetworkRouter.swift in Sources */,
 			);
