@@ -17,6 +17,8 @@
 		0115376A287C57A0003D663D /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01153769287C57A0003D663D /* SearchRepository.swift */; };
 		0115376C287C5D1E003D663D /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0115376B287C5D1E003D663D /* SearchModel.swift */; };
 		0115376E287C6082003D663D /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0115376D287C6082003D663D /* SearchViewModel.swift */; };
+		01153770287CC5EF003D663D /* sorrow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0115376F287CC5EF003D663D /* sorrow.mp3 */; };
+		01153772287CC81E003D663D /* AuthWebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01153771287CC81E003D663D /* AuthWebView.storyboard */; };
 		012D548A287BF2A7004ABFD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D5489287BF2A7004ABFD5 /* AppDelegate.swift */; };
 		012D5491287BF2A7004ABFD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012D548F287BF2A7004ABFD5 /* Main.storyboard */; };
 		012D5493287BF2A9004ABFD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012D5492287BF2A9004ABFD5 /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 		01153769287C57A0003D663D /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
 		0115376B287C5D1E003D663D /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		0115376D287C6082003D663D /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		0115376F287CC5EF003D663D /* sorrow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sorrow.mp3; sourceTree = "<group>"; };
+		01153771287CC81E003D663D /* AuthWebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthWebView.storyboard; sourceTree = "<group>"; };
 		012D5486287BF2A7004ABFD5 /* Spotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		012D5489287BF2A7004ABFD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		012D5490287BF2A7004ABFD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 			children = (
 				01153758287C0F0D003D663D /* AuthenticationViewController.swift */,
 				0115375A287C0F21003D663D /* AuthWebViewViewController.swift */,
+				01153771287CC81E003D663D /* AuthWebView.storyboard */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 		012D549E287BF6EB004ABFD5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				0115376F287CC5EF003D663D /* sorrow.mp3 */,
 				012D5492287BF2A9004ABFD5 /* Assets.xcassets */,
 				012D5494287BF2A9004ABFD5 /* LaunchScreen.storyboard */,
 			);
@@ -334,6 +340,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01153772287CC81E003D663D /* AuthWebView.storyboard in Resources */,
+				01153770287CC5EF003D663D /* sorrow.mp3 in Resources */,
 				012D5496287BF2A9004ABFD5 /* LaunchScreen.storyboard in Resources */,
 				012D5493287BF2A9004ABFD5 /* Assets.xcassets in Resources */,
 				01153765287C5390003D663D /* Search.storyboard in Resources */,
@@ -560,6 +568,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4ZW7S4J23N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Spotifier/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -588,6 +597,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4ZW7S4J23N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Spotifier/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

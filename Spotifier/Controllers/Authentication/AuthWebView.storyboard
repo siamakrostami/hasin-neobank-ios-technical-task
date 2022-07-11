@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Auth Web View View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AuthWebViewViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="AuthWebViewViewController" customModule="Spotifier" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W38-6j-TDR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZc-Zt-5Gg">
+                                        <rect key="frame" x="4" y="3" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="ZYl-ZD-7cS"/>
+                                            <constraint firstAttribute="width" secondItem="YZc-Zt-5Gg" secondAttribute="height" multiplier="1:1" id="raF-Aj-SyR"/>
+                                        </constraints>
+                                        <color key="tintColor" name="customGreen"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="chevron.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="back:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ddq-48-aZU"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5M-om-6Wa">
+                                        <rect key="frame" x="180.5" y="14.5" width="53" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" name="customGreen"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="YZc-Zt-5Gg" firstAttribute="centerY" secondItem="W38-6j-TDR" secondAttribute="centerY" id="4xL-Si-tlw"/>
+                                    <constraint firstAttribute="height" constant="50" id="KVI-en-VUZ"/>
+                                    <constraint firstItem="M5M-om-6Wa" firstAttribute="centerX" secondItem="W38-6j-TDR" secondAttribute="centerX" id="OeI-XX-ZJj"/>
+                                    <constraint firstItem="YZc-Zt-5Gg" firstAttribute="leading" secondItem="W38-6j-TDR" secondAttribute="leading" constant="4" id="W99-AY-tO1"/>
+                                    <constraint firstItem="M5M-om-6Wa" firstAttribute="centerY" secondItem="W38-6j-TDR" secondAttribute="centerY" id="agr-Qi-f74"/>
+                                </constraints>
+                            </view>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vhm-hH-cL7">
+                                <rect key="frame" x="0.0" y="94" width="414" height="802"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="customBlack"/>
+                        <constraints>
+                            <constraint firstItem="W38-6j-TDR" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="262-Yr-tqQ"/>
+                            <constraint firstItem="W38-6j-TDR" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="9a2-qd-7N4"/>
+                            <constraint firstAttribute="bottom" secondItem="vhm-hH-cL7" secondAttribute="bottom" id="FBc-Vg-V0Q"/>
+                            <constraint firstItem="vhm-hH-cL7" firstAttribute="width" secondItem="W38-6j-TDR" secondAttribute="width" id="hSf-gC-voM"/>
+                            <constraint firstItem="vhm-hH-cL7" firstAttribute="centerX" secondItem="W38-6j-TDR" secondAttribute="centerX" id="kGK-yd-UAA"/>
+                            <constraint firstItem="W38-6j-TDR" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="lxJ-Bd-Cwt"/>
+                            <constraint firstItem="vhm-hH-cL7" firstAttribute="top" secondItem="W38-6j-TDR" secondAttribute="bottom" id="pLV-jw-bi8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="vhm-hH-cL7" id="dWE-oY-sHf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="129"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <namedColor name="customBlack">
+            <color red="0.097999997437000275" green="0.078000001609325409" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="customGreen">
+            <color red="0.11400000005960464" green="0.72500002384185791" blue="0.32899999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

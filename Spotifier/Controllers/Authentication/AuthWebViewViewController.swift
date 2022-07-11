@@ -11,14 +11,16 @@ import Combine
 
 class AuthWebViewViewController: BaseViewController {
     
-    private let webView: WKWebView = {
-        let prefs = WKWebpagePreferences()
-        prefs.allowsContentJavaScript = true
-        let config = WKWebViewConfiguration()
-        config.defaultWebpagePreferences = prefs
-        let webView = WKWebView(frame: .zero,configuration: config)
-        return webView
-    }()
+    
+    @IBOutlet weak var webView: WKWebView!{
+        didSet{
+            let prefs = WKWebpagePreferences()
+            prefs.allowsContentJavaScript = true
+            let config = WKWebViewConfiguration()
+            config.defaultWebpagePreferences = prefs
+        }
+    }
+    
     
     var token = CurrentValueSubject<String?,Never>(nil)
     var disposeBag : Set<AnyCancellable> = []
@@ -32,20 +34,23 @@ class AuthWebViewViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = false
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         webView.frame = view.bounds
     }
+    
+    @IBAction func back(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 
 }
 
 extension AuthWebViewViewController {
     
     private func initializeWebView(){
-        title = "Sign In"
         view.backgroundColor = .systemBackground
         webView.navigationDelegate = self
         self.view.addSubview(webView)
@@ -59,7 +64,7 @@ extension AuthWebViewViewController {
     }
     
     static func buildController() -> AuthWebViewViewController {
-        let controller = AuthWebViewViewController()
+        let controller = AppStoryboard.AuthWebView.viewController(viewControllerClass: AuthWebViewViewController.self)
         return controller
     }
     

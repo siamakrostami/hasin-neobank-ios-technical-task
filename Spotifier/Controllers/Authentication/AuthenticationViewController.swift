@@ -20,6 +20,11 @@ class AuthenticationViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
+        self.viewModel.playSampleSong()
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.viewModel.deinitPlayer()
     }
     
     override func viewDidLoad() {
@@ -40,7 +45,7 @@ class AuthenticationViewController: BaseViewController {
 
 extension AuthenticationViewController {
     private func navigateToLogin(){
-        self.navigationController?.pushViewController(authWebView, animated: true)
+        self.navigationController?.pushViewController(self.authWebView, animated: true)
     }
     
     private func bindToken(){

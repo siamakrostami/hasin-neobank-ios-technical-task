@@ -29,7 +29,7 @@ extension UIViewController{
     }
     
     enum AppStoryboard : String {
-        case Main,ImageDetail
+        case Main,AuthWebView
         
         var instance : UIStoryboard {
             return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
