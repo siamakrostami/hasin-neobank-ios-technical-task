@@ -36,7 +36,6 @@ class AuthenticationViewController: BaseViewController {
         self.bindToken()
         self.bindError()
         self.bindIsLoginSuccess()
-        title = "Spotifier"
         
         // Do any additional setup after loading the view.
     }

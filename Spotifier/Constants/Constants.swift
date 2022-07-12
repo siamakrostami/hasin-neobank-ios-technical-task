@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Constants{
     
@@ -23,5 +24,9 @@ struct Constants{
     static var credential : String {
         return clientId + ":" + clientSecret
     }
+    static let estimatedRow : CGFloat = 100
+    static let headerHeight : CGFloat = 40
+    static let artistTitle = "Artists"
+    static let tracksTitle = "Tracks"
 
 }

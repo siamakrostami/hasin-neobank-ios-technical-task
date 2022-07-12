@@ -46,8 +46,6 @@ extension APIClient : APIClientProtocols {
                         result(.failure(.noContent))
                         return
                     }
-                    let str = String(data: data, encoding: .utf8)
-                    debugPrint(str)
                     do{
                         let finalData = try self.decoder.decode(T.self, from: data)
                         result(.success(finalData))
@@ -58,8 +56,8 @@ extension APIClient : APIClientProtocols {
                     }
                 case .failure(let error):
                     debugPrint(error.localizedDescription)
-                    let finalError = ClientError(rawValue: error.responseCode ?? 1002)
-                    result(.failure(finalError ?? .unknown))
+                    let finalError = ClientError(rawValue: error.responseCode ?? 1009)
+                    result(.failure(finalError ?? .unreachable))
                 }
                 
             }

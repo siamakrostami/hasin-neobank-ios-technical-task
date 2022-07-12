@@ -20,6 +20,7 @@ class SearchViewController: BaseViewController {
         didSet{
             searchBar.delegate = self
             searchBar.returnKeyType = .search
+            searchBar.textField.textColor = .white
         }
     }
     @IBOutlet weak var searchTableView: UITableView!{
@@ -29,7 +30,7 @@ class SearchViewController: BaseViewController {
             searchTableView.register(UINib(nibName: TrackTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: TrackTableViewCell.identifier)
             searchTableView.register(UINib(nibName: ArtistTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ArtistTableViewCell.identifier)
             searchTableView.register(UINib(nibName: SearchHeaderTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: SearchHeaderTableViewCell.identifier)
-            searchTableView.estimatedRowHeight = 100
+            searchTableView.estimatedRowHeight = Constants.estimatedRow
             searchTableView.rowHeight = UITableView.automaticDimension
             searchTableView.refreshControl = self.refreshController
         }
@@ -157,23 +158,41 @@ extension SearchViewController : UITableViewDelegate , UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let model = self.viewModel.searchModel else {return}
+        switch indexPath.section{
+        case 0:
+            guard let artist = model.artists else {return}
+            guard let currentArtist = artist.items else {return}
+            let current = currentArtist[indexPath.row]
+            let controller = ArtistViewController.build(model: current)
+            self.navigationController?.pushViewController(controller, animated: true)
+        default:
+            guard let tracks = model.tracks else {return}
+            guard let currentTracks = tracks.items else {return}
+            let current = currentTracks[indexPath.row]
+            let controller = TrackViewController.build(model: current)
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let header = tableView.dequeueReusableCell(withIdentifier: SearchHeaderTableViewCell.identifier) as? SearchHeaderTableViewCell else {return UITableViewCell()}
         switch section{
         case 0:
-            header.titleLabel.text = "Artists"
+            header.titleLabel.text = Constants.artistTitle
         default:
-            header.titleLabel.text = "Tracks"
+            header.titleLabel.text = Constants.tracksTitle
         }
         return header
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
+        return Constants.headerHeight
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return Constants.estimatedRow
     }
     
     
@@ -181,7 +200,7 @@ extension SearchViewController : UITableViewDelegate , UITableViewDataSource {
 
 extension SearchViewController : UISearchBarDelegate {
     func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
-        self.viewModel.searchText.send(searchBar.text ?? nil)
+        self.viewModel.searchText.send(searchBar.text)
         self.viewModel.Search()
         self.view.endEditing(true)
         return true
@@ -192,7 +211,7 @@ extension SearchViewController : UISearchBarDelegate {
         self.view.endEditing(true)
     }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        self.viewModel.searchText.send(searchBar.text ?? nil)
+        self.viewModel.searchText.send(searchBar.text)
         self.viewModel.Search()
         self.view.endEditing(true)
     }

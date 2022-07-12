@@ -1,7 +1,9 @@
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
 //
-//   let search = try? newJSONDecoder().decode(Search.self, from: jsonData)
+//  SearchModel.swift
+//  Spotifier
+//
+//  Created by Siamak Rostami on 7/11/22.
+//
 
 import Foundation
 

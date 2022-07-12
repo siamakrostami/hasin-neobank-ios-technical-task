@@ -10,7 +10,6 @@ import Combine
 
 protocol SearchViewModelProtocols{
     func searchItem(query : String?)
-   // func getRecommended()
 }
 
 class SearchViewModel{
@@ -34,26 +33,14 @@ class SearchViewModel{
 extension SearchViewModel : SearchViewModelProtocols{
     
     func Search(){
-        self.searchModel = nil
-        self.searchItem(query: self.searchText.value)
+        if searchText.value == "" || searchText.value == nil {
+            self.searchModel = nil
+            self.shouldUpdateCollection.send(true)
+        }else{
+            self.searchModel = nil
+            self.searchItem(query: self.searchText.value)
+        }
     }
-    
-//    func getRecommended() {
-//        isLoading.send(true)
-//        self.networkServices.recommendedService.getRecommended(limit: recommendedLimit, offset: recommendedOffset) { [weak self] response in
-//            guard let `self` = self else {
-//                self?.isLoading.send(false)
-//                return
-//            }
-//            switch response{
-//            case .success(let model):
-//                self.isLoading.send(false)
-//            case .failure(let error):
-//                self.isLoading.send(false)
-//                self.error.send(error)
-//            }
-//        }
-//    }
     
     internal func searchItem(query: String?) {
         isLoading.send(true)
