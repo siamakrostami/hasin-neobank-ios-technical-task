@@ -36,6 +36,7 @@ extension AppDelegate {
     
     func setRootController(){
         if let _ = UserInfoModel.shared.getUserToken(){
+            debugPrint(UserInfoModel.shared.getUserToken())
             setSearchController()
         }else{
             setLoginController()

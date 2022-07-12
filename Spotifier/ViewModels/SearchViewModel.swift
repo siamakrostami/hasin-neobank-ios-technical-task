@@ -22,8 +22,8 @@ class SearchViewModel{
     var error = CurrentValueSubject<ClientError?,Never>(nil)
     var isLoading = CurrentValueSubject<Bool,Never>(false)
     var shouldUpdateCollection = CurrentValueSubject<Bool?,Never>(nil)
-    private var searchModel : Search?
-    private var recommendedModel : Search?
+    var searchModel : Search?
+    var recommendedModel : Search?
     var searchAlbum = Albums()
     var searchTrack = Tracks()
     var searchArtist = Artist()
@@ -77,12 +77,6 @@ extension SearchViewModel : SearchViewModelProtocols{
         }
     }
     
-    private func handleSearchModels(model : Search?){
-        
-    }
-    private func handleRecommendedModel(model : Search?){
-        
-    }
     
     
 }

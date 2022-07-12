@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spotify-green" translatesAutoresizingMaskIntoConstraints="NO" id="P4r-5H-6A6">
-                                        <rect key="frame" x="182" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="182" y="0.5" width="50" height="48.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="P4r-5H-6A6" secondAttribute="height" multiplier="1:1" id="H0B-gp-oHu"/>
                                         </constraints>
@@ -38,6 +38,10 @@
                                 <rect key="frame" x="0.0" y="94" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hjE-Cy-AB0">
+                                <rect key="frame" x="10.5" y="153" width="393" height="709"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="customBlack"/>
@@ -46,10 +50,18 @@
                             <constraint firstItem="evS-Ce-QEr" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Fcw-09-QQv"/>
                             <constraint firstItem="evS-Ce-QEr" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="LcH-Sk-14M"/>
                             <constraint firstItem="TLH-1K-VpX" firstAttribute="top" secondItem="evS-Ce-QEr" secondAttribute="bottom" id="aLq-K0-Nvk"/>
+                            <constraint firstItem="hjE-Cy-AB0" firstAttribute="top" secondItem="TLH-1K-VpX" secondAttribute="bottom" constant="8" id="iBW-wU-DQU"/>
+                            <constraint firstItem="hjE-Cy-AB0" firstAttribute="width" secondItem="TLH-1K-VpX" secondAttribute="width" multiplier="0.95" id="jxk-oA-2x9"/>
                             <constraint firstItem="evS-Ce-QEr" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="kmK-yk-Tcw"/>
+                            <constraint firstItem="hjE-Cy-AB0" firstAttribute="centerX" secondItem="TLH-1K-VpX" secondAttribute="centerX" id="ofW-9k-DWl"/>
                             <constraint firstItem="TLH-1K-VpX" firstAttribute="centerX" secondItem="evS-Ce-QEr" secondAttribute="centerX" id="oy1-gX-JTX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hjE-Cy-AB0" secondAttribute="bottom" id="qmu-Pv-a6k"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="TLH-1K-VpX" id="7Jr-eq-DD1"/>
+                        <outlet property="searchTableView" destination="hjE-Cy-AB0" id="9jR-5t-LaB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

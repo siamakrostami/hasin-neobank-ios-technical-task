@@ -37,6 +37,7 @@
 		012D54C3287BFC75004ABFD5 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D54C2287BFC75004ABFD5 /* AuthenticationViewModel.swift */; };
 		012D54C6287BFD05004ABFD5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D54C5287BFD05004ABFD5 /* Constants.swift */; };
 		0177B527287D520C00A7E8F1 /* ReleasesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0177B526287D520C00A7E8F1 /* ReleasesRepository.swift */; };
+		018F1E84287DA66500975788 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018F1E83287DA66500975788 /* UITableView+Extensions.swift */; };
 		B70D815830035FE66B83E72E /* Pods_Spotifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9925745D381F5C55B39B6F /* Pods_Spotifier.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		012D54C2287BFC75004ABFD5 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		012D54C5287BFD05004ABFD5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0177B526287D520C00A7E8F1 /* ReleasesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleasesRepository.swift; sourceTree = "<group>"; };
+		018F1E83287DA66500975788 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		5991B37FB89BBF9F8863030D /* Pods-Spotifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotifier.debug.xcconfig"; path = "Target Support Files/Pods-Spotifier/Pods-Spotifier.debug.xcconfig"; sourceTree = "<group>"; };
 		CB9925745D381F5C55B39B6F /* Pods_Spotifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spotifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37A572C7E11CD2289D951AD /* Pods-Spotifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotifier.release.xcconfig"; path = "Target Support Files/Pods-Spotifier/Pods-Spotifier.release.xcconfig"; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				012D54B5287BF821004ABFD5 /* UIView+Extensions.swift */,
 				012D54B7287BF840004ABFD5 /* UITextfield+Extensions.swift */,
 				0115375E287C46A1003D663D /* String+Extensions.swift */,
+				018F1E83287DA66500975788 /* UITableView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				012D54BC287BF8E2004ABFD5 /* SpotifyAuthRepository.swift in Sources */,
 				012D54AF287BF780004ABFD5 /* ClientError.swift in Sources */,
 				0115376C287C5D1E003D663D /* SearchModel.swift in Sources */,
+				018F1E84287DA66500975788 /* UITableView+Extensions.swift in Sources */,
 				012D54AD287BF780004ABFD5 /* APIClient.swift in Sources */,
 				0115376A287C57A0003D663D /* SearchRepository.swift in Sources */,
 				01153759287C0F0D003D663D /* AuthenticationViewController.swift in Sources */,

@@ -38,30 +38,25 @@ extension APIClient : APIClientProtocols {
         }
         let request = sessionManager.request(urlRequest,interceptor: interceptor)
         request
-            .responseData { response in
-                guard let code = response.response?.statusCode else {
-                    result(.failure(.unknown))
-                    return
-                }
-                switch code{
-                case 200...299:
-                    switch response.result{
-                    case.success(let data):
-                        do{
-                            let finalData = try self.decoder.decode(T.self, from: data)
-                            result(.success(finalData))
-                            
-                        }catch{
-                            debugPrint(error.localizedDescription)
-                            result(.failure(.parser))
-                        }
-                    case .failure(let error):
-                        debugPrint(error.localizedDescription)
-                        let finalError = ClientError(rawValue: error.responseCode ?? 1002)
-                        result(.failure(finalError ?? .unknown))
+            .validate()
+            .response { response in
+                switch response.result{
+                case.success(let data):
+                    guard let data = data else {
+                        result(.failure(.noContent))
+                        return
                     }
-                default:
-                    let finalError = ClientError(rawValue: response.response?.statusCode ?? 1002)
+                    do{
+                        let finalData = try self.decoder.decode(T.self, from: data)
+                        result(.success(finalData))
+                        
+                    }catch{
+                        debugPrint(error.localizedDescription)
+                        result(.failure(.parser))
+                    }
+                case .failure(let error):
+                    debugPrint(error.localizedDescription)
+                    let finalError = ClientError(rawValue: error.responseCode ?? 1002)
                     result(.failure(finalError ?? .unknown))
                 }
                 
