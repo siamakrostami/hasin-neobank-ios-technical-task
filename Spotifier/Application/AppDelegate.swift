@@ -13,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        self.configureNavigationBarAppearance()
         self.setRootController()
         // Override point for customization after application launch.
         return true
@@ -28,15 +27,8 @@ var window: UIWindow?
 
 extension AppDelegate {
     
-    func configureNavigationBarAppearance(){
-        UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().tintColor = UIColor(named: "customGreen")
-        UINavigationBar.appearance().backgroundColor = .white
-    }
-    
     func setRootController(){
         if let _ = UserInfoModel.shared.getUserToken(){
-            debugPrint(UserInfoModel.shared.getUserToken())
             setSearchController()
         }else{
             setLoginController()

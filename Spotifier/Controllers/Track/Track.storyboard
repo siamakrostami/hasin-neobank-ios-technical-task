@@ -1,30 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="s0d-6b-0kx">
+        <!--Track View Controller-->
+        <scene sceneID="Psy-3K-B58">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                <viewController storyboardIdentifier="TrackViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z4L-Je-zJX" customClass="TrackViewController" customModule="Spotifier" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="soV-QI-lP8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U1E-S7-urn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="U1E-S7-urn" secondAttribute="height" multiplier="1:1" id="FDQ-w7-rPw"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJ0-5n-amm">
+                                <rect key="frame" x="8" y="44" width="44" height="44"/>
+                                <color key="backgroundColor" name="customBlack"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="Oce-Fd-aLY"/>
+                                    <constraint firstAttribute="height" constant="44" id="dQd-Eh-kIY"/>
+                                </constraints>
+                                <color key="tintColor" name="customGreen"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="chevron.left" catalog="system">
+                                    <color key="titleColor" name="customGreen"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="back:" destination="z4L-Je-zJX" eventType="touchUpInside" id="nia-j3-AEz"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jG5-3y-a15">
+                                <rect key="frame" x="20.5" y="460" width="373" height="158.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBc-ey-4Hd">
+                                        <rect key="frame" x="0.0" y="0.0" width="53" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" name="customGreen"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcY-b9-Krf">
+                                        <rect key="frame" x="0.0" y="29" width="43.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxS-W1-djU">
+                                        <rect key="frame" x="0.0" y="54.5" width="61.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" name="customGreen"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wA5-0s-YkB">
+                                        <rect key="frame" x="0.0" y="83.5" width="43.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popularity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEM-Ef-AMb">
+                                        <rect key="frame" x="0.0" y="109" width="96.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" name="customGreen"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUC-H3-Vch">
+                                        <rect key="frame" x="0.0" y="138" width="43.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7B-Li-8sW" userLabel="play">
+                                <rect key="frame" x="12" y="384" width="60" height="60"/>
+                                <color key="backgroundColor" name="customGreen"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="VjU-h2-YlZ"/>
+                                    <constraint firstAttribute="height" constant="60" id="wyj-Zj-QTg"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="play.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playOrPause:" destination="z4L-Je-zJX" eventType="touchUpInside" id="gOb-xw-ra6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zyk-IV-FvZ"/>
+                        <color key="backgroundColor" name="customBlack"/>
+                        <constraints>
+                            <constraint firstItem="jG5-3y-a15" firstAttribute="width" secondItem="U1E-S7-urn" secondAttribute="width" multiplier="0.9" id="JBe-qg-Aph"/>
+                            <constraint firstItem="U1E-S7-urn" firstAttribute="centerX" secondItem="Zyk-IV-FvZ" secondAttribute="centerX" id="KoI-Tx-aU5"/>
+                            <constraint firstItem="h7B-Li-8sW" firstAttribute="leading" secondItem="U1E-S7-urn" secondAttribute="leading" constant="12" id="N83-MX-2sG"/>
+                            <constraint firstItem="qJ0-5n-amm" firstAttribute="top" secondItem="Zyk-IV-FvZ" secondAttribute="top" id="bhk-mf-MQp"/>
+                            <constraint firstItem="jG5-3y-a15" firstAttribute="top" secondItem="h7B-Li-8sW" secondAttribute="bottom" constant="16" id="ln6-fw-AWF"/>
+                            <constraint firstAttribute="top" secondItem="U1E-S7-urn" secondAttribute="top" id="qOF-sU-ysU"/>
+                            <constraint firstItem="qJ0-5n-amm" firstAttribute="leading" secondItem="Zyk-IV-FvZ" secondAttribute="leading" constant="8" id="rIF-ri-1xL"/>
+                            <constraint firstItem="h7B-Li-8sW" firstAttribute="centerY" secondItem="U1E-S7-urn" secondAttribute="bottom" id="tf1-l5-iem"/>
+                            <constraint firstItem="U1E-S7-urn" firstAttribute="width" secondItem="soV-QI-lP8" secondAttribute="width" id="vVA-lP-lid"/>
+                            <constraint firstItem="jG5-3y-a15" firstAttribute="centerX" secondItem="U1E-S7-urn" secondAttribute="centerX" id="yy6-RA-HKo"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="albumNameLabel" destination="wA5-0s-YkB" id="f9E-NY-2BH"/>
+                        <outlet property="playOutlet" destination="h7B-Li-8sW" id="OWB-vQ-w3j"/>
+                        <outlet property="popularityLabel" destination="sUC-H3-Vch" id="f6k-0P-giK"/>
+                        <outlet property="trackImageView" destination="U1E-S7-urn" id="w1p-QY-QzX"/>
+                        <outlet property="trackNameLabel" destination="XcY-b9-Krf" id="Hfk-3X-DAw"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qOO-eI-eA2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="91" y="98"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <namedColor name="customBlack">
+            <color red="0.097999997437000275" green="0.078000001609325409" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="customGreen">
+            <color red="0.11400000005960464" green="0.72500002384185791" blue="0.32899999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
