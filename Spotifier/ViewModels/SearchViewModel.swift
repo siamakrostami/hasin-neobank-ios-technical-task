@@ -15,7 +15,7 @@ protocol SearchViewModelProtocols{
 
 class SearchViewModel{
     var networkServices : NetworkServices
-    var limit : Int = 20
+    var limit : Int = 40
     var offset : Int = 0
     var error = CurrentValueSubject<ClientError?,Never>(nil)
     var isLoading = CurrentValueSubject<Bool,Never>(false)
@@ -35,8 +35,6 @@ extension SearchViewModel : SearchViewModelProtocols{
     
     func Search(){
         self.searchModel = nil
-        self.limit = 20
-        self.offset = 0
         self.searchItem(query: self.searchText.value)
     }
     
