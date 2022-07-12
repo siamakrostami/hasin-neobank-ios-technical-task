@@ -9,6 +9,9 @@ import Foundation
 
 struct Constants{
     
+    static let baseApiURL = "https://api.spotify.com/v1/"
+    static let newReleasesPath = "browse/new-releases?limit={{limit}}&offset={{offset}}"
+    static let searchPatch = "search?q={{search}}&type=artist,track&include_external=audio&limit={{limit}}&offset={{offset}}"
     static let clientId = "dfcea584767d400f9c1f254398d1946b"
     static let clientSecret = "84432bf867cb4cf5aac283e3e9f9007d"
     static let tokenApiURL = "https://accounts.spotify.com/"

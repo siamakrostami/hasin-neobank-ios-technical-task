@@ -13,6 +13,10 @@ class AuthenticationViewController: BaseViewController {
         return AuthWebViewViewController.buildController()
     }()
     
+    private lazy var searchViewController : SearchViewController = {
+        return SearchViewController.build()
+    }()
+    
     private lazy var viewModel : AuthenticationViewModel = {
        return AuthenticationViewModel()
     }()
@@ -20,6 +24,11 @@ class AuthenticationViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
+        self.viewModel.playSampleSong()
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.viewModel.deinitPlayer()
     }
     
     override func viewDidLoad() {
@@ -39,8 +48,14 @@ class AuthenticationViewController: BaseViewController {
 }
 
 extension AuthenticationViewController {
+    
+    static func build() -> AuthenticationViewController {
+        let controller = AppStoryboard.Main.viewController(viewControllerClass: AuthenticationViewController.self)
+        return controller
+    }
+    
     private func navigateToLogin(){
-        self.navigationController?.pushViewController(authWebView, animated: true)
+        self.navigationController?.pushViewController(self.authWebView, animated: true)
     }
     
     private func bindToken(){
@@ -72,14 +87,15 @@ extension AuthenticationViewController {
                 guard let `self` = self else {return}
                 guard let isSuccess = isSuccess else {return}
                 if isSuccess{
-                    self.navigateToDiscovery()
+                    self.navigateToSearch()
                 }
             }
             .store(in: &viewModel.disposeBag)
     }
     
-    private func navigateToDiscovery(){
-        
+    private func navigateToSearch(){
+        let app = UIApplication.shared.delegate as? AppDelegate
+        app?.setSearchController()
     }
     
     

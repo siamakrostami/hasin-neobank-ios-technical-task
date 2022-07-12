@@ -13,5 +13,13 @@ struct NetworkServices {
         return SpotifyAuthRepository()
     }()
     
+    lazy var searchService : SearchRepository = {
+       return SearchRepository()
+    }()
+    
+    lazy var recommendedService : ReleasesRepository = {
+       return ReleasesRepository()
+    }()
+    
     
 }

@@ -36,17 +36,27 @@ extension AppDelegate {
     
     func setRootController(){
         if let _ = UserInfoModel.shared.getUserToken(){
-            setLoginController()
+            debugPrint(UserInfoModel.shared.getUserToken())
+            setSearchController()
         }else{
             setLoginController()
         }
     }
     
     func setLoginController(){
-        guard let rootVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AuthenticationViewController") as? AuthenticationViewController else {return}
+        let rootVc = AuthenticationViewController.build()
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
         let rootNavigation = UINavigationController(rootViewController: rootVc)
+        rootNavigation.isNavigationBarHidden = true
+        window?.rootViewController = rootNavigation
+        window?.makeKeyAndVisible()
+    }
+    
+    func setSearchController(){
+        let controller = SearchViewController.build()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let rootNavigation = UINavigationController(rootViewController: controller)
         rootNavigation.isNavigationBarHidden = true
         window?.rootViewController = rootNavigation
         window?.makeKeyAndVisible()
