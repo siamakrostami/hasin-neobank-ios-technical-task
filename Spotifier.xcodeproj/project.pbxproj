@@ -40,6 +40,12 @@
 		018F1E84287DA66500975788 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018F1E83287DA66500975788 /* UITableView+Extensions.swift */; };
 		018F1E89287DA95F00975788 /* Artist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018F1E88287DA95F00975788 /* Artist.storyboard */; };
 		018F1E8B287DA96800975788 /* Track.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018F1E8A287DA96800975788 /* Track.storyboard */; };
+		018F1E8E287DB27C00975788 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018F1E8C287DB27C00975788 /* TrackTableViewCell.swift */; };
+		018F1E8F287DB27C00975788 /* TrackTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 018F1E8D287DB27C00975788 /* TrackTableViewCell.xib */; };
+		018F1E92287DB28800975788 /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018F1E90287DB28800975788 /* ArtistTableViewCell.swift */; };
+		018F1E93287DB28800975788 /* ArtistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 018F1E91287DB28800975788 /* ArtistTableViewCell.xib */; };
+		018F1E96287DB29B00975788 /* SearchHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018F1E94287DB29B00975788 /* SearchHeaderTableViewCell.swift */; };
+		018F1E97287DB29B00975788 /* SearchHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 018F1E95287DB29B00975788 /* SearchHeaderTableViewCell.xib */; };
 		B70D815830035FE66B83E72E /* Pods_Spotifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9925745D381F5C55B39B6F /* Pods_Spotifier.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +85,12 @@
 		018F1E83287DA66500975788 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		018F1E88287DA95F00975788 /* Artist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Artist.storyboard; sourceTree = "<group>"; };
 		018F1E8A287DA96800975788 /* Track.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Track.storyboard; sourceTree = "<group>"; };
+		018F1E8C287DB27C00975788 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
+		018F1E8D287DB27C00975788 /* TrackTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackTableViewCell.xib; sourceTree = "<group>"; };
+		018F1E90287DB28800975788 /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
+		018F1E91287DB28800975788 /* ArtistTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistTableViewCell.xib; sourceTree = "<group>"; };
+		018F1E94287DB29B00975788 /* SearchHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		018F1E95287DB29B00975788 /* SearchHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		5991B37FB89BBF9F8863030D /* Pods-Spotifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotifier.debug.xcconfig"; path = "Target Support Files/Pods-Spotifier/Pods-Spotifier.debug.xcconfig"; sourceTree = "<group>"; };
 		CB9925745D381F5C55B39B6F /* Pods_Spotifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spotifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37A572C7E11CD2289D951AD /* Pods-Spotifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotifier.release.xcconfig"; path = "Target Support Files/Pods-Spotifier/Pods-Spotifier.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +150,12 @@
 		01153768287C53AE003D663D /* XIB */ = {
 			isa = PBXGroup;
 			children = (
+				018F1E8C287DB27C00975788 /* TrackTableViewCell.swift */,
+				018F1E8D287DB27C00975788 /* TrackTableViewCell.xib */,
+				018F1E90287DB28800975788 /* ArtistTableViewCell.swift */,
+				018F1E91287DB28800975788 /* ArtistTableViewCell.xib */,
+				018F1E94287DB29B00975788 /* SearchHeaderTableViewCell.swift */,
+				018F1E95287DB29B00975788 /* SearchHeaderTableViewCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -368,12 +386,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				018F1E93287DB28800975788 /* ArtistTableViewCell.xib in Resources */,
 				01153772287CC81E003D663D /* AuthWebView.storyboard in Resources */,
 				01153770287CC5EF003D663D /* sorrow.mp3 in Resources */,
 				012D5496287BF2A9004ABFD5 /* LaunchScreen.storyboard in Resources */,
 				012D5493287BF2A9004ABFD5 /* Assets.xcassets in Resources */,
+				018F1E97287DB29B00975788 /* SearchHeaderTableViewCell.xib in Resources */,
 				018F1E8B287DA96800975788 /* Track.storyboard in Resources */,
 				018F1E89287DA95F00975788 /* Artist.storyboard in Resources */,
+				018F1E8F287DB27C00975788 /* TrackTableViewCell.xib in Resources */,
 				01153765287C5390003D663D /* Search.storyboard in Resources */,
 				012D5491287BF2A7004ABFD5 /* Main.storyboard in Resources */,
 			);
@@ -432,7 +453,9 @@
 				012D54AC287BF780004ABFD5 /* RetrieInterceptor.swift in Sources */,
 				012D54B6287BF821004ABFD5 /* UIView+Extensions.swift in Sources */,
 				012D548A287BF2A7004ABFD5 /* AppDelegate.swift in Sources */,
+				018F1E92287DB28800975788 /* ArtistTableViewCell.swift in Sources */,
 				01153762287C4EA6003D663D /* BaseViewController.swift in Sources */,
+				018F1E8E287DB27C00975788 /* TrackTableViewCell.swift in Sources */,
 				0115375F287C46A1003D663D /* String+Extensions.swift in Sources */,
 				012D54C3287BFC75004ABFD5 /* AuthenticationViewModel.swift in Sources */,
 				0115375B287C0F21003D663D /* AuthWebViewViewController.swift in Sources */,
@@ -450,6 +473,7 @@
 				0115376C287C5D1E003D663D /* SearchModel.swift in Sources */,
 				018F1E84287DA66500975788 /* UITableView+Extensions.swift in Sources */,
 				012D54AD287BF780004ABFD5 /* APIClient.swift in Sources */,
+				018F1E96287DB29B00975788 /* SearchHeaderTableViewCell.swift in Sources */,
 				0115376A287C57A0003D663D /* SearchRepository.swift in Sources */,
 				01153759287C0F0D003D663D /* AuthenticationViewController.swift in Sources */,
 				012D54AE287BF780004ABFD5 /* NetworkRouter.swift in Sources */,
