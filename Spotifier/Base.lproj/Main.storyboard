@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gilmour" translatesAutoresizingMaskIntoConstraints="NO" id="2MP-0W-BqX">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gilmour-bw" translatesAutoresizingMaskIntoConstraints="NO" id="2MP-0W-BqX">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WT-Ee-ehi">
@@ -69,7 +69,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gilmour" width="606" height="900"/>
+        <image name="gilmour-bw" width="320" height="400"/>
         <image name="spotify-black" width="4096" height="4096"/>
         <namedColor name="customBlack">
             <color red="0.097999997437000275" green="0.078000001609325409" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -17,5 +17,9 @@ struct NetworkServices {
        return SearchRepository()
     }()
     
+    lazy var recommendedService : ReleasesRepository = {
+       return ReleasesRepository()
+    }()
+    
     
 }

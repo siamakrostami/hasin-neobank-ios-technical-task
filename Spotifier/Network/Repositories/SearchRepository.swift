@@ -11,7 +11,7 @@ import Alamofire
 typealias SearchCompletion = ((Result<Search?,ClientError>) -> Void)
 
 protocol SearchRepositoryProtocols{
-    func searchItem(searchQuery : String ,offset : Int, completion:@escaping SearchCompletion)
+    func searchItem(searchQuery : String ,offset : Int,limit : Int, completion:@escaping SearchCompletion)
 }
 
 struct SearchRepository{
@@ -22,8 +22,8 @@ struct SearchRepository{
 }
 
 extension SearchRepository : SearchRepositoryProtocols{
-    func searchItem(searchQuery: String, offset : Int,completion: @escaping SearchCompletion) {
-        self.client.request(SearchRouter.searchItem(query: searchQuery, offset: offset), result: completion)
+    func searchItem(searchQuery: String, offset : Int,limit : Int,completion: @escaping SearchCompletion) {
+        self.client.request(SearchRouter.searchItem(query: searchQuery, offset: offset, limit: limit), result: completion)
     }
     
     
@@ -33,7 +33,7 @@ extension SearchRepository{
     
     enum SearchRouter : NetworkRouter{
         
-        case searchItem(query : String , offset : Int)
+        case searchItem(query : String , offset : Int , limit : Int)
         
         var method: RequestMethod?{
             return .get
@@ -48,8 +48,8 @@ extension SearchRepository{
         }
         var path: String{
             switch self {
-            case .searchItem(let query, let offset):
-                return Constants.searchPatch.replacingOccurrences(of: "{{search}}", with: query).replacingOccurrences(of: "{{offset}}", with: "\(offset)")
+            case .searchItem(let query, let offset , let limit):
+                return Constants.searchPatch.replacingOccurrences(of: "{{search}}", with: query).replacingOccurrences(of: "{{offset}}", with: "\(offset)").replacingOccurrences(of: "{{limit}}", with: "\(limit)")
             }
         }
         var headers: [String : String]?{
