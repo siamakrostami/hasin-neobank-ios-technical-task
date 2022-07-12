@@ -49,7 +49,8 @@ extension SearchRepository{
         var path: String{
             switch self {
             case .searchItem(let query, let offset , let limit):
-                return Constants.searchPatch.replacingOccurrences(of: "{{search}}", with: query).replacingOccurrences(of: "{{offset}}", with: "\(offset)").replacingOccurrences(of: "{{limit}}", with: "\(limit)")
+                let newQuery = query.replacingOccurrences(of: " ", with: "+")
+                return Constants.searchPatch.replacingOccurrences(of: "{{search}}", with: newQuery).replacingOccurrences(of: "{{offset}}", with: "\(offset)").replacingOccurrences(of: "{{limit}}", with: "\(limit)")
             }
         }
         var headers: [String : String]?{

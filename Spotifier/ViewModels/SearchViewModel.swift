@@ -23,12 +23,8 @@ class SearchViewModel{
     var isLoading = CurrentValueSubject<Bool,Never>(false)
     var shouldUpdateCollection = CurrentValueSubject<Bool?,Never>(nil)
     var searchModel : Search?
-    var recommendedModel : Search?
-    var searchAlbum = Albums()
-    var searchTrack = Tracks()
-    var searchArtist = Artist()
-    var recommendedAlbum = Albums()
-    
+    var searchText = CurrentValueSubject<String?,Never>(nil)
+    var disposeBag : Set<AnyCancellable> = []
     
 
     init(services : NetworkServices = NetworkServices()){
@@ -38,6 +34,13 @@ class SearchViewModel{
 }
 
 extension SearchViewModel : SearchViewModelProtocols{
+    
+    func Search(){
+        self.searchModel = nil
+        self.limit = 20
+        self.offset = 0
+        self.searchItem(query: self.searchText.value)
+    }
     
     func getRecommended() {
         isLoading.send(true)
@@ -49,7 +52,6 @@ extension SearchViewModel : SearchViewModelProtocols{
             switch response{
             case .success(let model):
                 self.isLoading.send(false)
-                self.recommendedModel = model
             case .failure(let error):
                 self.isLoading.send(false)
                 self.error.send(error)

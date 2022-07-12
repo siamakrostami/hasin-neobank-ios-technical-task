@@ -22,7 +22,7 @@ extension UITableView{
         imageView.contentMode = .scaleAspectFit
         //label view
         let messageLabel = UILabel()
-        messageLabel.text = message ?? "Search for tracks,albums or artists"
+        messageLabel.text = message ?? "Search for tracks or artists"
         messageLabel.textColor = .white
         messageLabel.textAlignment = .center
         messageLabel.font = .systemFont(ofSize: 17, weight: .medium)

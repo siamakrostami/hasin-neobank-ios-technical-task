@@ -46,6 +46,8 @@ extension APIClient : APIClientProtocols {
                         result(.failure(.noContent))
                         return
                     }
+                    let str = String(data: data, encoding: .utf8)
+                    debugPrint(str)
                     do{
                         let finalData = try self.decoder.decode(T.self, from: data)
                         result(.success(finalData))

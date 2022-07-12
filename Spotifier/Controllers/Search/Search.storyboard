@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spotify-green" translatesAutoresizingMaskIntoConstraints="NO" id="P4r-5H-6A6">
-                                        <rect key="frame" x="182" y="0.5" width="50" height="48.5"/>
+                                        <rect key="frame" x="182" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="P4r-5H-6A6" secondAttribute="height" multiplier="1:1" id="H0B-gp-oHu"/>
                                         </constraints>
