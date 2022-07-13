@@ -39,7 +39,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="customBlack"/>
                                 <constraints>
                                     <constraint firstItem="YZc-Zt-5Gg" firstAttribute="centerY" secondItem="W38-6j-TDR" secondAttribute="centerY" id="4xL-Si-tlw"/>
                                     <constraint firstAttribute="height" constant="50" id="KVI-en-VUZ"/>
@@ -48,9 +48,9 @@
                                     <constraint firstItem="M5M-om-6Wa" firstAttribute="centerY" secondItem="W38-6j-TDR" secondAttribute="centerY" id="agr-Qi-f74"/>
                                 </constraints>
                             </view>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vhm-hH-cL7">
+                            <wkWebView clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vhm-hH-cL7">
                                 <rect key="frame" x="0.0" y="94" width="414" height="802"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="customBlack"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
