@@ -27,6 +27,7 @@ class AuthWebViewViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         self.initializeWebView()
         self.loadWebView()
         
@@ -51,7 +52,6 @@ class AuthWebViewViewController: BaseViewController {
 extension AuthWebViewViewController {
     
     private func initializeWebView(){
-        view.backgroundColor = .systemBackground
         webView.navigationDelegate = self
         self.view.addSubview(webView)
     }
